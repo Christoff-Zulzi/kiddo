@@ -73,11 +73,10 @@ extern crate serde;
 #[cfg_attr(feature = "serialize", macro_use)]
 extern crate serde_derive;
 
-mod custom_serde;
 pub mod distance;
 mod heap_element;
-pub mod kiddo;
+pub mod kdtree;
 mod util;
 
-pub use crate::kiddo::ErrorKind;
-pub use crate::kiddo::KdTree;
+pub use crate::kdtree::ErrorKind;
+pub use crate::kdtree::KdTree;
