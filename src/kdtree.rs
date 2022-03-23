@@ -1,5 +1,4 @@
 use std::collections::{BinaryHeap};
-use std::hash::Hash;
 
 use num_traits::{Float, One, Zero};
 
@@ -186,7 +185,7 @@ impl<A: Float + Zero + One, const K: usize> KdTree<A, K> {
     }
 
     fn add_unchecked(&mut self, point: &[A; K]) {
-        let res = match &mut self.content {
+        match &mut self.content {
             Node::Leaf { .. } => {
                 self.add_to_bucket(point);
             }
